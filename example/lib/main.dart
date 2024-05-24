@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:alphabet_scroll_view/alphabet_scroll_view.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  const MyHomePage({ Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -33,6 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void _incrementCounter() {}
 
   List<String> list = [
+    'τεστ',
+    'τεσττεσ',
     'angel',
     'bubbles',
     'shimmer',
@@ -134,20 +138,16 @@ class _MyHomePageState extends State<MyHomePage> {
               // isAlphabetsFiltered: false,
               alignment: LetterAlignment.right,
               itemExtent: 50,
-              unselectedTextStyle: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.normal,
-                color: Colors.black
-              ),
-              selectedTextStyle: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red
-              ),
+              unselectedTextStyle: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.black),
+              selectedTextStyle: const TextStyle(
+                  fontSize: 20, fontWeight: FontWeight.bold, color: Colors.red),
               overlayWidget: (value) => Stack(
                 alignment: Alignment.center,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.star,
                     size: 50,
                     color: Colors.red,
@@ -155,14 +155,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(
                     height: 50,
                     width: 50,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       // color: Theme.of(context).primaryColor,
                     ),
                     alignment: Alignment.center,
                     child: Text(
                       '$value'.toUpperCase(),
-                      style: TextStyle(fontSize: 18, color: Colors.white),
+                      style: const TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ),
                 ],
@@ -172,8 +172,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: const EdgeInsets.only(right: 20),
                   child: ListTile(
                     title: Text('$id'),
-                    subtitle: Text('Secondary text'),
-                    leading: Icon(Icons.person),
+                    subtitle: const Text('Secondary text'),
+                    leading: const Icon(Icons.person),
                     trailing: Radio<bool>(
                       value: false,
                       groupValue: selectedIndex != k,
@@ -196,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
           FloatingActionButton(
             onPressed: _incrementCounter,
             tooltip: 'Increment',
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
         ],
       ),
