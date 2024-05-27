@@ -251,7 +251,7 @@ class _AlphabetScrollViewState extends State<AlphabetScrollView> {
                                   style: selected == x
                                       ? widget.selectedTextStyle
                                       : widget.unselectedTextStyle,
-                                  textScaler: TextScaler.linear(0.7),
+                                  textScaler: TextScaler.linear(0.8),
                                   // style: TextStyle(
                                   //     fontSize: 12,
                                   //     fontWeight: selected == x
