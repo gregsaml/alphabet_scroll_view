@@ -245,13 +245,13 @@ class _AlphabetScrollViewState extends State<AlphabetScrollView> {
                               },
                               child: Container(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 12, vertical: 1),
+                                    horizontal: 13, vertical: 0.5),
                                 child: Text(
                                   _filteredAlphabets[x].toUpperCase(),
                                   style: selected == x
                                       ? widget.selectedTextStyle
                                       : widget.unselectedTextStyle,
-                                  textScaler: TextScaler.linear(0.75),
+                                  textScaler: TextScaler.linear(0.7),
                                   // style: TextStyle(
                                   //     fontSize: 12,
                                   //     fontWeight: selected == x
