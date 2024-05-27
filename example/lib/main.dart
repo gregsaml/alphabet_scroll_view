@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({ Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -35,6 +35,46 @@ class _MyHomePageState extends State<MyHomePage> {
   void _incrementCounter() {}
 
   List<String> list = [
+    'Αλεξανδρα',
+    'Αλεξανδρος',
+    'β',
+    'Βασιλης',
+    'Βασιλικη',
+    'γ',
+    'Γιωργος',
+    'Γιωργια',
+    'δ',
+    'Δημητρης',
+    'Δημητρα',
+    'ε',
+    'Ελενη',
+    'Ελευθερια',
+    'ζ',
+    'Ζαχαριας',
+    'Ζωη',
+    'η',
+    'Ηλιας',
+    'Ηλεκτρα',
+    'θ',
+    'Θεοδωρος',
+    'Θεοδωρα',
+    'ι',
+    'Ιωαννης',
+    'Ιωαννα',
+    'κ',
+    'Κωστας',
+    'Κατερινα',
+    'λ',
+    'Λουκας',
+    'Λουκια',
+    'μ',
+    'Μαριος',
+    'Μαρια',
+    'ν',
+    'Νικος',
+    'κοριτσιμιου',
+    'ρεμαλακαες',
+    'δενδουλευιει',
     'τεστ',
     'τεσττεσ',
     'angel',

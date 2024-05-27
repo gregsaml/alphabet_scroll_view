@@ -218,6 +218,7 @@ class _AlphabetScrollViewState extends State<AlphabetScrollView> {
               ? Alignment.centerLeft
               : Alignment.centerRight,
           child: Container(
+            height: MediaQuery.of(context).size.height,
             key: key,
             padding: const EdgeInsets.symmetric(horizontal: 2),
             child: SingleChildScrollView(
@@ -244,12 +245,13 @@ class _AlphabetScrollViewState extends State<AlphabetScrollView> {
                               },
                               child: Container(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 12, vertical: 2),
+                                    horizontal: 12, vertical: 1),
                                 child: Text(
                                   _filteredAlphabets[x].toUpperCase(),
                                   style: selected == x
                                       ? widget.selectedTextStyle
                                       : widget.unselectedTextStyle,
+                                  textScaler: TextScaler.linear(0.75),
                                   // style: TextStyle(
                                   //     fontSize: 12,
                                   //     fontWeight: selected == x
